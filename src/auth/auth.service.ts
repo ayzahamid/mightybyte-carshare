@@ -12,7 +12,7 @@ export class AuthService {
   }
 
   createToken(driver: { id: string, username: string }) {
-    return this.jwtService.sign({ id: driver.id, username: driver.username });
+    return this.jwtService.sign({ username: driver.username });
   }
 
   verifyToken(token: string) {
