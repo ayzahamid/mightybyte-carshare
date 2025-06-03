@@ -31,8 +31,7 @@ export class DashboardGateway {
     const interval = setInterval(() => {
       const location = driverLocations.get(username);
       const driver = DRIVERS.find((d) => d.username === username);
-      // Only emit if the location is fresh (less than 10 minutes old)
-      console.log("Date.now() - location.timestamp <= 60 * 1000", Date.now() - (location?.timestamp || 0));
+
       if (
         location &&
         driver &&
